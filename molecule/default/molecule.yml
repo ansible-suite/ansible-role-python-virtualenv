@@ -5,7 +5,7 @@ dependency:
 driver:
   name: docker
 platforms:
-  - name: "molecule-apt_thirdparty-${image:-ubuntu}-${tag:-latest}"
+  - name: "molecule-python-virtualenv-${image:-ubuntu}-${tag:-latest}"
     image: "${image:-ubuntu}:${tag:-latest}"
 ansible:
   playbooks:
