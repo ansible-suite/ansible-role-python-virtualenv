@@ -14,7 +14,7 @@
     state: latest
     virtualenv: "{{ python_virtualenv_dir }}"
     virtualenv_command: "{{ python_virtualenv_command | default(omit) }}"
-    virtualenv_python: "{{ python_virtualenv_python if python_virtualenv_command is not defined }}"
+    virtualenv_python: "{{ python_virtualenv_python if python_virtualenv_command is not defined else omit }}"
   when: python_virtualenv_upgrade_pip
 
 - name: Install Python packages
@@ -23,4 +23,4 @@
     state: latest
     virtualenv: "{{ python_virtualenv_dir }}"
     virtualenv_command: "{{ python_virtualenv_command | default(omit) }}"
-    virtualenv_python: "{{ python_virtualenv_python }}"
+    virtualenv_python: "{{ python_virtualenv_python if python_virtualenv_command is not defined else omit }}"
