@@ -1,4 +1,4 @@
-- name: Install the 'numpy' package using the ansible-suite.python_virtualenv with 'python3 -m venv'
+- name: Install the 'ansible' package using the ansible-suite.python_virtualenv with 'python3 -m venv'
   hosts: all
   become: true
   roles:

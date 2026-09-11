@@ -1,9 +1,9 @@
-- name: Install the 'numpy' package using the ansible-suite.python_virtualenv role
+- name: Install the 'ansible' package using the ansible-suite.python_virtualenv role
   hosts: all
   become: true
   roles:
     - ansible-suite.python_virtualenv
   vars:
-    python_virtualenv_dir: /opt/venv_ansible
+    python_virtualenv_dir: /opt/virtualenv_ansible
     python_virtualenv_packages:
       - ansible
