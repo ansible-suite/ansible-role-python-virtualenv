@@ -4,6 +4,6 @@
   roles:
     - ansible-suite.python_virtualenv
   vars:
-    python_virtualenv_dir: /opt/venv_numpy
+    python_virtualenv_dir: /opt/virtualenv_numpy
     python_virtualenv_packages:
       - numpy
