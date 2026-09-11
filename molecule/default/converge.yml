@@ -1,0 +1,5 @@
+- name: Import playbook from 'ansible' scenario
+  ansible.builtin.import_playbook: ../ansible/converge.yml
+
+- name: Import playbook from 'numpy' scenario
+  ansible.builtin.import_playbook: ../numpy/converge.yml
