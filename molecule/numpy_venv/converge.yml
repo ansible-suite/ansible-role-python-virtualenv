@@ -1,0 +1,10 @@
+- name: Install the 'numpy' package using the ansible-suite.python_virtualenv with 'python3 -m venv'
+  hosts: all
+  become: true
+  roles:
+    - ansible-suite.python_virtualenv
+  vars:
+    python_virtualenv_dir: /opt/venv_numpy
+    python_virtualenv_packages:
+      - numpy
+    python_virtualenv_command: "{{ ansible_python_interpreter | default('python3') }} -m venv"
